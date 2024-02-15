@@ -122,16 +122,16 @@ const Page = () => {
     };
 
     return (
-        <main>
-            <GlobalContext.Provider value={{data, setData}}>
-                <form method='post' onSubmit={handleFormSubmit} className='bg-white mx-auto mt-6 max-w-screen-sm'>
-                    <h1>Add a new recipe </h1>
+          <>
+          <section className='mx-auto max-w-6xl py-20 px-12 lg:px-24  mb-24'> 
+          <GlobalContext.Provider value={{data, setData}}>
+                <form method='post' onSubmit={handleFormSubmit} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col rounded-lg'>
 
                     {errorMessage && (
-                        <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+                        <span className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
                         <p className="font-bold">{errorMessage}</p>
                         
-                      </div>
+                      </span>
                       
                     )}
                     {displaySteps(currentStep)}
@@ -140,7 +140,9 @@ const Page = () => {
                     
                 </form>
             </GlobalContext.Provider>
-        </main>
+          </section>
+            
+        </>
     );
 };
 

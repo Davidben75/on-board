@@ -44,7 +44,7 @@ const InstructionsForm = () => {
                     <label>Step {i + 1}</label>
                     <input
                         value={instruction}
-                        className="border rounded-md mx-auto w-full leading-loose"
+                        className="block w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-3 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         onChange={(e) => handleInstructionsChange(i, e)}
                     />
                     <button
